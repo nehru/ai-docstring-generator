@@ -1,0 +1,39 @@
+# Model outputs (too large for git)
+docstring-model-phi3/
+checkpoint-*/
+*.safetensors
+*.bin
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+```
+
+---
+
+**FINAL STRUCTURE FOR GITHUB:**
+```
+python-docstring-generator/
+├── .gitignore
+├── README.md
+├── requirements.txt
+├── dataset.json
+├── fine_tune_phi3_final.py
+├── test_model.py
+└── diagnostic.py

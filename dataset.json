@@ -1,0 +1,126 @@
+[
+  {
+    "input": "def calculate_average(numbers):\n    total = sum(numbers)\n    return total / len(numbers)",
+    "output": "def calculate_average(numbers):\n    \"\"\"\n    Calculate the arithmetic mean of a list of numbers.\n    \n    Args:\n        numbers (list): List of numeric values\n        \n    Returns:\n        float: The average of all numbers in the list\n    \"\"\"\n    total = sum(numbers)\n    return total / len(numbers)"
+  },
+  {
+    "input": "def find_max(numbers):\n    max_val = numbers[0]\n    for num in numbers:\n        if num > max_val:\n            max_val = num\n    return max_val",
+    "output": "def find_max(numbers):\n    \"\"\"\n    Find the maximum value in a list of numbers.\n    \n    Args:\n        numbers (list): List of numeric values\n        \n    Returns:\n        int/float: The maximum value found in the list\n    \"\"\"\n    max_val = numbers[0]\n    for num in numbers:\n        if num > max_val:\n            max_val = num\n    return max_val"
+  },
+  {
+    "input": "def reverse_string(text):\n    return text[::-1]",
+    "output": "def reverse_string(text):\n    \"\"\"\n    Reverse a string.\n    \n    Args:\n        text (str): The string to reverse\n        \n    Returns:\n        str: The reversed string\n    \"\"\"\n    return text[::-1]"
+  },
+  {
+    "input": "def is_palindrome(text):\n    cleaned = text.lower().replace(' ', '')\n    return cleaned == cleaned[::-1]",
+    "output": "def is_palindrome(text):\n    \"\"\"\n    Check if a string is a palindrome.\n    \n    Args:\n        text (str): The string to check\n        \n    Returns:\n        bool: True if the string is a palindrome, False otherwise\n    \"\"\"\n    cleaned = text.lower().replace(' ', '')\n    return cleaned == cleaned[::-1]"
+  },
+  {
+    "input": "def count_vowels(text):\n    vowels = 'aeiouAEIOU'\n    count = 0\n    for char in text:\n        if char in vowels:\n            count += 1\n    return count",
+    "output": "def count_vowels(text):\n    \"\"\"\n    Count the number of vowels in a string.\n    \n    Args:\n        text (str): The input string\n        \n    Returns:\n        int: The number of vowels found\n    \"\"\"\n    vowels = 'aeiouAEIOU'\n    count = 0\n    for char in text:\n        if char in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n-1)",
+    "output": "def factorial(n):\n    \"\"\"\n    Calculate the factorial of a number recursively.\n    \n    Args:\n        n (int): The number to calculate factorial for\n        \n    Returns:\n        int: The factorial of n\n    \"\"\"\n    if n <= 1:\n        return 1\n    return n * factorial(n-1)"
+  },
+  {
+    "input": "def is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+    "output": "def is_prime(n):\n    \"\"\"\n    Check if a number is prime.\n    \n    Args:\n        n (int): The number to check\n        \n    Returns:\n        bool: True if the number is prime, False otherwise\n    \"\"\"\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True"
+  },
+  {
+    "input": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)",
+    "output": "def fibonacci(n):\n    \"\"\"\n    Calculate the nth Fibonacci number recursively.\n    \n    Args:\n        n (int): The position in the Fibonacci sequence\n        \n    Returns:\n        int: The nth Fibonacci number\n    \"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)"
+  },
+  {
+    "input": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr",
+    "output": "def bubble_sort(arr):\n    \"\"\"\n    Sort an array using the bubble sort algorithm.\n    \n    Args:\n        arr (list): The list to sort\n        \n    Returns:\n        list: The sorted list in ascending order\n    \"\"\"\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr"
+  },
+  {
+    "input": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1",
+    "output": "def binary_search(arr, target):\n    \"\"\"\n    Perform binary search on a sorted array.\n    \n    Args:\n        arr (list): Sorted list to search in\n        target: The value to search for\n        \n    Returns:\n        int: Index of target if found, -1 otherwise\n    \"\"\"\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1"
+  },
+  {
+    "input": "def read_file(filename):\n    try:\n        with open(filename, 'r') as f:\n            return f.read()\n    except FileNotFoundError:\n        return None",
+    "output": "def read_file(filename):\n    \"\"\"\n    Read the contents of a file safely.\n    \n    Args:\n        filename (str): Path to the file to read\n        \n    Returns:\n        str: File contents if successful, None if file not found\n    \"\"\"\n    try:\n        with open(filename, 'r') as f:\n            return f.read()\n    except FileNotFoundError:\n        return None"
+  },
+  {
+    "input": "def write_json(data, filename):\n    import json\n    with open(filename, 'w') as f:\n        json.dump(data, f, indent=2)\n    return True",
+    "output": "def write_json(data, filename):\n    \"\"\"\n    Write data to a JSON file.\n    \n    Args:\n        data: The data to write (must be JSON serializable)\n        filename (str): Path to the output file\n        \n    Returns:\n        bool: True if successful\n    \"\"\"\n    import json\n    with open(filename, 'w') as f:\n        json.dump(data, f, indent=2)\n    return True"
+  },
+  {
+    "input": "def merge_dicts(dict1, dict2):\n    result = dict1.copy()\n    result.update(dict2)\n    return result",
+    "output": "def merge_dicts(dict1, dict2):\n    \"\"\"\n    Merge two dictionaries into one.\n    \n    Args:\n        dict1 (dict): First dictionary\n        dict2 (dict): Second dictionary\n        \n    Returns:\n        dict: New dictionary with merged key-value pairs\n    \"\"\"\n    result = dict1.copy()\n    result.update(dict2)\n    return result"
+  },
+  {
+    "input": "def remove_duplicates(lst):\n    return list(set(lst))",
+    "output": "def remove_duplicates(lst):\n    \"\"\"\n    Remove duplicate elements from a list.\n    \n    Args:\n        lst (list): Input list with potential duplicates\n        \n    Returns:\n        list: List with duplicates removed\n    \"\"\"\n    return list(set(lst))"
+  },
+  {
+    "input": "def flatten_list(nested_list):\n    flat = []\n    for item in nested_list:\n        if isinstance(item, list):\n            flat.extend(flatten_list(item))\n        else:\n            flat.append(item)\n    return flat",
+    "output": "def flatten_list(nested_list):\n    \"\"\"\n    Flatten a nested list structure recursively.\n    \n    Args:\n        nested_list (list): List potentially containing nested lists\n        \n    Returns:\n        list: Flattened list with all elements at one level\n    \"\"\"\n    flat = []\n    for item in nested_list:\n        if isinstance(item, list):\n            flat.extend(flatten_list(item))\n        else:\n            flat.append(item)\n    return flat"
+  },
+  {
+    "input": "def calculate_percentage(part, whole):\n    return (part / whole) * 100",
+    "output": "def calculate_percentage(part, whole):\n    \"\"\"\n    Calculate percentage of a part relative to the whole.\n    \n    Args:\n        part (float): The part value\n        whole (float): The whole value\n        \n    Returns:\n        float: Percentage value\n    \"\"\"\n    return (part / whole) * 100"
+  },
+  {
+    "input": "def get_file_extension(filename):\n    return filename.split('.')[-1]",
+    "output": "def get_file_extension(filename):\n    \"\"\"\n    Extract the file extension from a filename.\n    \n    Args:\n        filename (str): The filename to process\n        \n    Returns:\n        str: The file extension without the dot\n    \"\"\"\n    return filename.split('.')[-1]"
+  },
+  {
+    "input": "def celsius_to_fahrenheit(celsius):\n    return (celsius * 9/5) + 32",
+    "output": "def celsius_to_fahrenheit(celsius):\n    \"\"\"\n    Convert temperature from Celsius to Fahrenheit.\n    \n    Args:\n        celsius (float): Temperature in Celsius\n        \n    Returns:\n        float: Temperature in Fahrenheit\n    \"\"\"\n    return (celsius * 9/5) + 32"
+  },
+  {
+    "input": "def validate_email(email):\n    import re\n    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'\n    return re.match(pattern, email) is not None",
+    "output": "def validate_email(email):\n    \"\"\"\n    Validate if a string is a properly formatted email address.\n    \n    Args:\n        email (str): The email string to validate\n        \n    Returns:\n        bool: True if email format is valid, False otherwise\n    \"\"\"\n    import re\n    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'\n    return re.match(pattern, email) is not None"
+  },
+  {
+    "input": "def chunk_list(lst, size):\n    return [lst[i:i+size] for i in range(0, len(lst), size)]",
+    "output": "def chunk_list(lst, size):\n    \"\"\"\n    Split a list into chunks of specified size.\n    \n    Args:\n        lst (list): The list to chunk\n        size (int): Size of each chunk\n        \n    Returns:\n        list: List of chunks\n    \"\"\"\n    return [lst[i:i+size] for i in range(0, len(lst), size)]"
+  },
+  {
+    "input": "def get_unique_words(text):\n    words = text.lower().split()\n    return list(set(words))",
+    "output": "def get_unique_words(text):\n    \"\"\"\n    Extract unique words from a text string.\n    \n    Args:\n        text (str): Input text\n        \n    Returns:\n        list: List of unique words in lowercase\n    \"\"\"\n    words = text.lower().split()\n    return list(set(words))"
+  },
+  {
+    "input": "def calculate_bmi(weight, height):\n    return weight / (height ** 2)",
+    "output": "def calculate_bmi(weight, height):\n    \"\"\"\n    Calculate Body Mass Index (BMI).\n    \n    Args:\n        weight (float): Weight in kilograms\n        height (float): Height in meters\n        \n    Returns:\n        float: BMI value\n    \"\"\"\n    return weight / (height ** 2)"
+  },
+  {
+    "input": "def contains_substring(text, substring):\n    return substring in text",
+    "output": "def contains_substring(text, substring):\n    \"\"\"\n    Check if a substring exists within a text.\n    \n    Args:\n        text (str): The text to search in\n        substring (str): The substring to search for\n        \n    Returns:\n        bool: True if substring is found, False otherwise\n    \"\"\"\n    return substring in text"
+  },
+  {
+    "input": "def get_dict_value(dictionary, key, default=None):\n    return dictionary.get(key, default)",
+    "output": "def get_dict_value(dictionary, key, default=None):\n    \"\"\"\n    Safely get a value from a dictionary with a default fallback.\n    \n    Args:\n        dictionary (dict): The dictionary to query\n        key: The key to look up\n        default: Value to return if key not found (default: None)\n        \n    Returns:\n        The value associated with the key, or default if not found\n    \"\"\"\n    return dictionary.get(key, default)"
+  },
+  {
+    "input": "def is_even(number):\n    return number % 2 == 0",
+    "output": "def is_even(number):\n    \"\"\"\n    Check if a number is even.\n    \n    Args:\n        number (int): The number to check\n        \n    Returns:\n        bool: True if even, False if odd\n    \"\"\"\n    return number % 2 == 0"
+  },
+  {
+    "input": "def generate_range(start, end, step=1):\n    return list(range(start, end, step))",
+    "output": "def generate_range(start, end, step=1):\n    \"\"\"\n    Generate a list of numbers in a specified range.\n    \n    Args:\n        start (int): Starting value\n        end (int): Ending value (exclusive)\n        step (int): Step size (default: 1)\n        \n    Returns:\n        list: List of numbers in the range\n    \"\"\"\n    return list(range(start, end, step))"
+  },
+  {
+    "input": "def sort_by_length(strings):\n    return sorted(strings, key=len)",
+    "output": "def sort_by_length(strings):\n    \"\"\"\n    Sort a list of strings by their length.\n    \n    Args:\n        strings (list): List of strings to sort\n        \n    Returns:\n        list: Strings sorted by length in ascending order\n    \"\"\"\n    return sorted(strings, key=len)"
+  },
+  {
+    "input": "def truncate_string(text, max_length):\n    if len(text) <= max_length:\n        return text\n    return text[:max_length] + '...'",
+    "output": "def truncate_string(text, max_length):\n    \"\"\"\n    Truncate a string to a maximum length and add ellipsis.\n    \n    Args:\n        text (str): The string to truncate\n        max_length (int): Maximum allowed length\n        \n    Returns:\n        str: Truncated string with '...' if it exceeded max_length\n    \"\"\"\n    if len(text) <= max_length:\n        return text\n    return text[:max_length] + '...'"
+  },
+  {
+    "input": "def filter_positive(numbers):\n    return [n for n in numbers if n > 0]",
+    "output": "def filter_positive(numbers):\n    \"\"\"\n    Filter out negative numbers and zero from a list.\n    \n    Args:\n        numbers (list): List of numeric values\n        \n    Returns:\n        list: List containing only positive numbers\n    \"\"\"\n    return [n for n in numbers if n > 0]"
+  },
+  {
+    "input": "def capitalize_words(text):\n    return ' '.join(word.capitalize() for word in text.split())",
+    "output": "def capitalize_words(text):\n    \"\"\"\n    Capitalize the first letter of each word in a string.\n    \n    Args:\n        text (str): The input text\n        \n    Returns:\n        str: Text with each word capitalized\n    \"\"\"\n    return ' '.join(word.capitalize() for word in text.split())"
+  },
+  {
+    "input": "def sum_of_squares(numbers):\n    return sum(n**2 for n in numbers)",
+    "output": "def sum_of_squares(numbers):\n    \"\"\"\n    Calculate the sum of squares of all numbers in a list.\n    \n    Args:\n        numbers (list): List of numeric values\n        \n    Returns:\n        float: Sum of all squared values\n    \"\"\"\n    return sum(n**2 for n in numbers)"
+  }
+]
