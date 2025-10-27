@@ -274,41 +274,6 @@ python fine_tune_phi3_final.py --max_steps 500
 - Support multiple docstring styles (NumPy, Sphinx)
 - Create web demo with Gradio/Streamlit
 
-## License
-
-MIT License - feel free to use this project for learning and portfolio purposes.
-
-## Contributing
-
-Pull requests welcome! Ideas for improvement:
-- Better dataset examples
-- Support for more programming languages
-- Evaluation benchmarks
-- Web interface
-
-## Contact
-
-For questions or suggestions, please open an issue on GitHub.
-
----
-
-## Resume Talking Points
-
-When discussing this project:
-1. "Fine-tuned a 3.8B parameter model using LoRA with only 0.65% trainable parameters"
-2. "Reduced documentation time by automatically generating professional docstrings"
-3. "Optimized training pipeline to complete in 20 minutes on RTX 5090"
-4. "Demonstrated practical application of transfer learning for code understanding"
-5. "Built end-to-end ML pipeline including data preparation, training, and inference"
-
-## Acknowledgments
-
-- Built using HuggingFace Transformers
-- Uses Microsoft's Phi-3 model
-- LoRA implementation from PEFT library
-
-## Training Output
-
 ### GPU Setup
 ```
 CUDA Available: ✓
@@ -409,7 +374,3 @@ def calculate_sum(numbers):
 ```bash
 python test_model.py --model_dir ./docstring-model-phi3
 ```
-
----
-
-**Status:** ✓ Training Complete | Model Successfully Generates Google-Style Docstrings
